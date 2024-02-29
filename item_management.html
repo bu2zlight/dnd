@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DnD Item Management</title>
+    <link rel="stylesheet" href="item_style.css"> 
+</head>
+<body>
+    <h1>Item Management</h1> 
+
+    <div id="itemForm"> 
+        <h2>Add/Edit Item</h2> 
+        <label for="itemType">Type:</label>
+        <select id="itemType">
+          <option value="Weapon">Weapon</option>
+          <option value="Armor">Armor</option>
+          <option value="Consumable">Consumable</option>
+          <option value="Other">Other</option> 
+        </select>
+
+        <label for="itemName">Name:</label>
+        <input type="text" id="itemName">
+
+        <label for="itemAccuracy">Accuracy:</label>
+        <input type="number" id="itemAccuracy"> 
+
+        <button onclick="addItem()">Save</button> 
+        <button onclick="cancelEdit()">Cancel</button> 
+    </div>
+
+    <div id="itemList">
+        <h2>Item List</h2> 
+    </div>
+
+    <script src="item_management.js"></script>
+</body>
+</html>

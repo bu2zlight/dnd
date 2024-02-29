@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DnD Calculator</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container"> 
+        <ul class="tabs">
+            <li class="active" data-tab="calculator">Calculator</li>
+            <li data-tab="itemManagement">Manage Items</li>
+        </ul>
+
+        <div id="calculator" class="tab-content">
+          <div id="diceSetCount">
+            Sets: <span id="setCount">1</span> 
+            <button onclick="incrementSets()">+</button>
+            <button onclick="decrementSets()">-</button> 
+          </div>
+            <div id="diceSets"> <div id="diceSet1"> <input type="number" id="quantity1" placeholder="Quantity" value="1" min="1">
+                    <input type="number" id="modifier1" placeholder="Modifier" value="0">
+                    <select id="diceType1">
+                      <option value="20">d20</option>
+                      <option value="12">d12</option>
+                      <option value="10">d10</option>
+                      <option value="8">d8</option>
+                      <option value="6">d6</option>
+                      <option value="4">d4</option>
+                      <option value="3">d3</option>
+                      <option value="2">d2</option>
+                    </select>
+                    <p id="result1"></p>
+                </div>
+            </div>
+
+            <button onclick="damageRoll()">Calculate</button>
+            <button onclick="resetCalculator()">Reset</button> 
+            <p id="overallTotal"></p>
+                    </div>
+                <div id="itemManagement" class="tab-content" style="display: none;"> 
+                </div> 
+    </div> 
+
+    <script src="script.js"></script>
+</body>
+</html>
